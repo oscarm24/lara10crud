@@ -1,14 +1,15 @@
-@extends('layouts.plantillabase')
+@extends('adminlte::page')
 
-@section('css')
+@section('title', 'CRUD')
 
-<link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css" rel="stylesheet">
+@section('content_header')
+    <h1>LISTADO DE ARTICULOS</h1>
+@stop
 
-@endsection
-
-@section('contenido')
+@section('content')
 
 <a href="articulos/create" class="btn btn-primary mb-3">CREAR</a>
+
 <table id="articulos" class="table table-striped table-boreded shadow-lg mt-4" style="width:100%">
     <thead class="bg-primary text-white">
         <tr>
@@ -42,8 +43,14 @@
     </tbody>
 </table>
 
-@section('js')
+@stop
 
+@section('css')
+<link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
 <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.js"></script>
@@ -54,7 +61,4 @@
     });
 </script>
 
-@endsection
-
-
-@endsection
+@stop
